@@ -1,0 +1,12 @@
+# Forex-signal-app
+Public 
+# streamlit_app.py
+import streamlit as st
+
+st.title("Forex Buy/Sell Suggestion App")
+
+df = get_forex_data()
+suggestion = analyze_market(df)
+
+st.write("Current Forex Data (EUR/USD):", df.tail(5))
+st.write("📈 Suggestion:", suggestion)
